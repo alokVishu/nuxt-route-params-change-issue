@@ -1,5 +1,5 @@
 <script setup>
-import demoPage from '@/views/demo.vue'
+import demoComponents from '@/views/demo.vue'
 const route = useRoute()
 
 const activeTab = ref(route.params.tab)
@@ -10,6 +10,7 @@ const tabs = [
   { title: 'Projects', icon: 'mdi-view-grid-outline', tab: 'projects' },
   { title: 'Connections', icon: 'mdi-link', tab: 'connections' },
 ]
+console.log('i m Parent');
 </script>
 
 <template>
@@ -20,5 +21,5 @@ const tabs = [
     </VTab>
   </VTabs>
 
-  <demoPage></demoPage>
+  <demoComponents></demoComponents>
 </template>
